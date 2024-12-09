@@ -1,0 +1,60 @@
+.events-background {
+    transition: background-image 0.5s ease;
+    height: 800px;
+    padding:0px;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.events-background .overlay{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 51%, rgba(0,0,0,0.5199807217808998) 75%, rgba(0,0,0,0.7216613940498074) 100%);
+}
+.events-slider .swiper-slide .card{
+    width: 100%;
+    height: 600px;
+}
+.events-slider .swiper-slide .card .overlay{
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    background-color: #00000036;
+}
+.events-slider .swiper-slide .card img{
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    background:transparent;
+}
+.events-slider .swiper-slide .card .card-img-overlay {
+    position: absolute;
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+@media (max-width: 2000px){
+    .events-background{
+        height: 600px;
+        background-position: top center;
+    }
+    .events-slider .swiper-slide .card{
+        width: 100%;
+        height: 400px;
+    }
+
+}
+@media (max-width: 768px) {
+    .events-background {
+        height: auto;
+        padding:0;
+    }
+}

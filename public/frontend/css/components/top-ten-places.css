@@ -1,0 +1,428 @@
+.datalist {
+    position: absolute;
+    top: 0;
+    left: 405px;
+    width: 680px;
+}
+.datalist .slick-list {
+    overflow: visible;
+    padding-bottom: 70px;
+}
+.datalist .slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transform: none !important;
+}
+.datalist .slick-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all .75s ease-in-out;
+}
+.datalist .slick-current {
+    z-index: 10;
+    left: 0;
+    top: 35px;
+    opacity: 1;
+}
+.datalist .slick-current + .slick-slide {
+    left: 742px;
+    top: 110px;
+    opacity: 1;
+}
+.datalist .slick-current + .slick-slide + .slick-slide {
+    left: 1120px;
+    top: 0;
+    opacity: 1;
+}
+.datalist .item {
+    vertical-align: top;
+}
+.datalist .item a {
+    position: relative;
+    display: block;
+    width: 320px;
+    height: 320px;
+    transition: all .5s ease-in-out;
+}
+.datalist .item a .tg1 {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    text-align: left;
+    color: #fff;
+    z-index: 1;
+    background: linear-gradient(to bottom, transparent, #000);
+    border-radius: 20px;
+    padding: 30px;
+}
+.datalist .item a .tg1 .h1 {
+    font-size: 16px;
+    color: #fff;
+    line-height: 1;
+    font-weight: 400;
+}
+.datalist .item a .tg1 .num {
+    position: absolute;
+    left: 20px;
+    bottom: 23px;
+    width: 100%;
+    text-align: left;
+    font-size: 42px;
+    font-family: "TTWanjudaedunsanche", sans-serif;
+    font-style: italic;
+    color: #fff;
+}
+.datalist .item a .tg1 .h1 span {
+    position: absolute;
+    left: 75px;
+    bottom: 30px;
+    font-size: 16px;
+    opacity: 1;
+    width: 85%;
+}
+.datalist .item a .tg1 .t1 {
+    display: block;
+    opacity: 0;
+    transition: opacity .35s ease .3s;
+}
+.datalist .item a .f1 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+}
+.datalist .item a .f1 .f1p1 {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    right: -100%;
+    overflow: hidden;
+}
+.datalist .item a .f1 .f1p1 img {
+    display: block;
+    width: auto;
+    height: 100%;
+    margin: auto;
+}
+.datalist .slick-current a {
+    width: 680px;
+    height: 480px;
+}
+.datalist .slick-current .item a .tg1 {
+    text-align: right;
+    padding: 65px;
+    border-bottom-right-radius: 80px;
+}
+.datalist .slick-current .item a .tg1 .num {
+    left: 53px;
+    bottom: 170px;
+    font-size: 72px;
+    text-align: right;
+    width: calc(100% - 106px);
+}
+.datalist .slick-current .item a .tg1 .t1 {
+    position: absolute;
+    bottom: 70px;
+    right: 53px;
+    line-height: 28px;
+    font-weight: 400;
+    opacity: 1;
+    font-size: 22px;
+}
+.datalist .slick-current .item a .f1 {
+    border-bottom-right-radius: 80px;
+}
+.navigation .m.prev, .navigation .m.next {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    z-index: 2;
+    text-indent: -9999px;
+    background: url(https://www.hygn.go.kr/_res/tour/img/main/main_sprite.png) no-repeat;
+    border: 0;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, .2);
+}
+.navigation .m.prev {
+    left: 1043px;
+    bottom: 90px;
+    background-position: -104px -37px;
+}
+.navigation .m.next {
+    left: 1090px;
+    bottom: 44px;
+    background-position: -166px -37px;
+}
+
+/*#top-ten-places .datalist .slick-current  .dot .dot-content:after {*/
+/*    content: "";*/
+/*    display: inline-flex;*/
+/*    vertical-align: middle;*/
+/*    width: 40%;*/
+/*    height: 4px;*/
+/*    background: #0070ab;*/
+/*    z-index: 10;*/
+/*    margin-left: 2px;*/
+/*    transition: width .35s ease;*/
+/*}*/
+#top-ten-places .datalist .slick-current  .dot .dot-content{
+    position: relative;
+}
+#top-ten-places .datalist .slick-current .dot  h2{
+    color: #0070ab;
+    text-align: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navigation .mControl {
+    position: absolute;
+    right: 154px;
+    bottom: 45px;
+    display: flex;
+    align-items: center;
+}
+.navigation .mNum {
+    display: inline-block;
+    color: #010101;
+    letter-spacing: -.075em;
+    font-weight: 400;
+
+}
+.navigation .mNum .on {
+    font-weight: 600;
+}
+.navigation .m {
+    width: 35px;
+    height: 35px;
+    background: url(https://www.hygn.go.kr/_res/tour/img/main/main_sprite.png) no-repeat;
+    border: 0;
+    text-indent: -9999px;
+}
+.navigation .mNum:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 55px;
+    height: 1px;
+    background: #b7b7b7;
+    margin: -4px 5px 0 8px;
+}
+.navigation .m.stop {
+    background-position: -312px 0;
+}
+.navigation .m.play {
+    background-position: -349px 0;
+    display: none;
+}
+[id*=top-ten-places] {
+    position: relative;
+}
+#top-ten-places{
+    /*z-index: 1;*/
+    padding-bottom: 170px;
+    height: 800px;
+    /*padding-top: 90px;*/
+}
+/*#top-ten-places:before {*/
+/*    position: absolute;*/
+/*    top: 18px;*/
+/*    right: 0;*/
+/*    !*content: "";*!*/
+/*    !*display: block;*!*/
+/*    width: 843px;*/
+/*    height: 250px;*/
+/*    content: "Turismo del Meta";*/
+/*    display: block;*/
+/*    font-size: 80px;*/
+/*    letter-spacing: -.025em;*/
+/*    color: rgba(229, 234, 236, .8);*/
+/*    font-family: "Cafe24 Danjunghae";*/
+/*}*/
+#top-ten-places .hg1 {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width:30%;
+}
+.top-ten-container {
+    position: relative;
+    min-width: 280px;
+    margin: auto;
+    max-width: 1500px;
+}
+#top-ten-places>.top-ten-container {
+    /*padding: 90px 0 35px 400px;*/
+    box-sizing: border-box;
+    height: 100%;
+}
+@media screen and (max-width: 1379px) {
+    #top-ten-places .navigation .mControl {
+        right: auto;
+        left: 30px;
+        bottom: 55px;
+    }
+}
+#top-ten-places .datalist .dot{
+    display: none;
+}
+#top-ten-places .datalist .slick-current .dot {
+    font-family: "TTWanjudaedunsanche", sans-serif;
+    font-size: 36px;
+    margin-left: 0;
+    color: #000;
+    position: absolute;
+    top: 200px;
+    left: -400px;
+    z-index: 2;
+    display: block;
+    width: 400px;
+}
+
+#top-ten-places .datalist .slick-current .dot .num {
+    display: block;
+    vertical-align: middle;
+    font-size: 20px;
+    color: #000;
+    font-style: italic;
+    margin-right: 12px;
+    margin-top: -4px;
+    text-align: left;
+}
+@media screen and (max-width: 1499px) {
+    #top-ten-places .datalist .slick-current button h2:after {
+        margin-left: 10px;
+    }
+}
+
+/*#top-ten-places:before {*/
+/*    position: absolute;*/
+/*    top: 18px;*/
+/*    right: 0;*/
+/*    !*content: "";*!*/
+/*    !*display: block;*!*/
+/*    width: 843px;*/
+/*    height: 250px;*/
+/*    content: "Turismo del Meta";*/
+/*    display: block;*/
+/*    font-size: 80px;*/
+/*    letter-spacing: -.025em;*/
+/*    color: rgba(229, 234, 236, .8);*/
+/*    font-family: "Cafe24 Danjunghae";*/
+/*}*/
+@media screen and (max-width: 1379px) {
+    #top-ten-places:after {
+        font-size: 188px;
+    }
+}
+#top-ten-places:after {
+    position: absolute;
+    bottom: 0;
+    left: 24%;
+    width: 1800px;
+    content: "Viaja por el Meta";
+    display: block;
+    font-size: 190px;
+    letter-spacing: -.025em;
+    color: rgba(229, 234, 236, .8);
+    font-family: "Cafe24 Danjunghae";
+    line-height: 1.1;
+    z-index: -1;
+}
+@media screen and (min-width: 1260px) {
+    #top-ten-places .datalist .slick-current .item a .tg1 span {
+        opacity: 0;
+        bottom: 153px;
+    }
+
+}
+@media screen and (max-width: 1379px) {
+    /*#top-ten-places:before {*/
+    /*    width: 674px;*/
+    /*    height: 200px;*/
+    /*}*/
+    #top-ten-places .hg1 {
+        position: absolute;
+        top: 55px;
+        left: 62px;
+        width:35%;
+    }
+    #top-ten-places:after {
+        font-size: 153px;
+        left: 80px;
+    }
+    .datalist {
+        position: absolute;
+        top: 0;
+        left: 530px;
+        width: 680px;
+    }
+    .datalist .slick-current a {
+        width: 600px;
+        height: 430px;
+    }
+}
+
+.top-ten-places .num{
+    font-family: "TTWanjudaedunsanche", sans-serif;
+    font-style: italic;
+    color: #fff;
+    font-size: 50px;
+}
+.top-ten-places .card-img-overlay{
+    background: linear-gradient(to bottom, transparent, #000);
+    border-radius: 20px;
+    border-bottom-right-radius: 60px;
+}
+.top-ten-places .card-img{
+    border-radius: 20px;
+    border-bottom-right-radius: 60px;
+}
+.top-ten-places-navigation button.btn-action,.top-ten-places-navigation button.btn-action :hover, .top-ten-places-navigation button.btn-action:focus, .top-ten-places-navigation button.btn-action:active{
+    background-color: #005676;
+}
+@media screen and (max-width: 2000px) {
+    #top-ten-places:after {
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 1800px;
+        content: "Viaja por el Meta";
+        display: block;
+        font-size: 190px;
+        letter-spacing: -.025em;
+        color: rgba(229, 234, 236, .8);
+        font-family: "Cafe24 Danjunghae";
+        line-height: 1.1;
+        z-index: -1;
+    }
+}
+@media screen and (max-width: 1500px) {
+    #top-ten-places:after {
+        position: absolute;
+        bottom: 0;
+        left: 6%;
+        width: 1800px;
+        content: "Viaja por el Meta";
+        display: block;
+        font-size: 150px;
+        letter-spacing: -.025em;
+        color: rgba(229, 234, 236, .8);
+        font-family: "Cafe24 Danjunghae";
+        line-height: 1.1;
+        z-index: -1;
+    }
+}

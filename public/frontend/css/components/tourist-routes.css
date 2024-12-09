@@ -1,0 +1,75 @@
+.tourist-routes.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.tourist-routes .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tourist-routes .swiper-slide .card{
+    width: 100%;
+    height: 100%;
+}
+.tourist-routes-sliders {
+    width: 100%;
+    height: 100%;
+    background-size: 250px;
+    background-repeat: space;
+
+}
+.tourist-routes-sliders  .swiper-slide .card .card-img-overlay {
+    position: absolute;
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.tourist-routes .swiper-slide .card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tourist-routes .swiper-slide .card a .overlay {
+    content: '';
+    position: absolute;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+    background-color: #0000003b;
+}
+.bird-image{
+    left:-5%;
+    bottom:0%;
+}
+@media (max-width: 1500px){
+    .bird-image{
+       display:none;
+    }
+}
+@-webkit-keyframes flip-vertical-left {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+}
+@keyframes flip-vertical-left {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+    100% {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+}

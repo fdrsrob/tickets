@@ -1,0 +1,15 @@
+body {
+    background: #fff;
+}
+.authentication-wrapper.authentication-basic .authentication-inner {
+    max-width: 1000px;
+    position: relative;
+}
+.text-with-background {
+    font-size: 15rem !important; /* Tamaño grande para el texto */
+    font-weight: bold !important;
+
+    background-size: cover !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}

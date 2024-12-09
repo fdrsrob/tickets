@@ -1,0 +1,100 @@
+.filter-cities-dropdown{
+    width: 900px;
+    z-index:2;
+}
+.filter-cities-dropdown ul.nav{
+    overflow-y: scroll;
+    height: 500px;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+.filter-cities-dropdown ul.nav::-webkit-scrollbar {
+    display: none;
+}
+.filter-cities-dropdown ul.nav li button {
+    display: flex;
+    justify-content: space-between;
+}
+.filter-cities-dropdown ul.nav li button.active{
+    background-color: #f4f4f4;
+    color: #05b7ff;
+    border-radius: 10px 0px 0px 10px
+}
+.filter-cities-dropdown .tab-content{
+    background-color: #f4f4f4;
+    border-radius: 0px 6px 6px 0px;
+}
+.filter-cities-dropdown .place-types .btn-white{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px !important;
+}
+.filter-cities-dropdown .place-types .btn-white .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    margin: -1px;
+    /*background-color: #000;*/
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.filter-cities-dropdown .place-types .btn-white .icon i {
+    font-size: 22px;
+    color: #fff;
+}
+.filter-cities-dropdown .place-types .btn-white .label {
+    font-family: 'Nexa';
+    color: #333;
+}
+.filter-city-map svg .cls-1, .filter-city-map svg .cls-2, .filter-city-map svg .cls-3, .filter-city-map svg .cls-4, .filter-city-map svg .cls-5, .filter-city-map svg .cls-6 {
+    fill-rule: evenodd;
+}
+
+.filter-city-map svg .cls-1, .filter-city-map svg .cls-2, .filter-city-map svg .cls-4, .filter-city-map svg .cls-5 {
+    fill: #b2b2b2;
+}
+
+.filter-city-map svg .cls-1, .filter-city-map svg .cls-4, .filter-city-map svg .cls-6 {
+    stroke-width: 0px;
+}
+
+.filter-city-map svg .cls-7 {
+    opacity: .13;
+}
+
+.filter-city-map svg .cls-2, .filter-city-map svg .cls-3, .filter-city-map svg .cls-5 {
+    stroke: #b2b2b2;
+    stroke-miterlimit: 3.85;
+    stroke-width: 4px;
+}
+.filter-city-map svg .cls-2 {
+    fill: #b2b2b2;
+    opacity: 1;
+}
+
+.filter-city-map svg .cls-2, .filter-city-map svg .cls-4 {
+    opacity: .1;
+}
+
+.filter-city-map svg .cls-3, .filter-city-map svg .cls-6 {
+    fill: none;
+}
+.filter-city-map svg .cls-3{
+    stroke: #b2b2b2;
+    opacity:1;
+    stroke-width: 20px;
+}
+.list-types-cities{
+    width: auto;
+}
+@media (max-width: 1500px){
+    .filter-cities-dropdown{
+        width: 600px;
+    }
+}
