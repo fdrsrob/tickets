@@ -15,12 +15,25 @@ use App\Http\Controllers\laravel_example\UserManagement;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
 Route::group(['prefix' => 'dashboard'], function (){
     Route::group(['prefix' => 'tickets'], function (){
         Route::get('/', [\App\Http\Controllers\TicketsController::class, 'index'])->name('tickets.index');
+    });
+    Route::group(['prefix' => 'users'], function (){
+        Route::get('/', [\App\Http\Controllers\ProfileUserController::class, 'index'])->name('profile-users.index');
+    });
+    Route::group(['prefix' => 'properties'], function (){
+        Route::get('/', [\App\Http\Controllers\PropertiesController::class, 'index'])->name('properties.index');
+    });
+    Route::group(['prefix' => 'cities'], function (){
+        Route::get('/', [\App\Http\Controllers\CitiesController::class, 'index'])->name('cities.index');
+    });
+    Route::group(['prefix' => 'states'], function (){
+        Route::get('/', [\App\Http\Controllers\StatesController::class, 'index'])->name('states.index');
+    });
+    Route::group(['prefix' => 'countries'], function (){
+        Route::get('/', [\App\Http\Controllers\CountriesController::class, 'index'])->name('countries.index');
     });
 });

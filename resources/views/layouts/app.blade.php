@@ -13,7 +13,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ $app_name ?? 'Turismo del Meta' }} - @yield('title')</title>
+    <title>{{ $app_name ?? 'TicketSwap' }} - @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>

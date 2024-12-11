@@ -13,17 +13,55 @@
         </a>
     </div>
     <ul class="menu-inner py-1">
-        <li class="menu-item">
-            <a href="#" class="menu-link">
-                <i class="menu-icon tf-icons icon-inicio"></i>
-                <div class="mx-2">{{__('Home')}}</div>
+        <li class="menu-item {{Route::is('home.*')?'active':''}}">
+            <a href="{{route('home.index')}}" class="menu-link">
+                <i class="menu-icon ti ti-dashboard"></i>
+                <div class="mx-2">{{__('Dashboard')}}</div>
             </a>
         </li>
-        <li class="menu-item {{Route::is('tickets.*')?'active':''}}">
+        {{-- <li class="menu-item {{Route::is('tickets.*')?'active':''}}">
             <a href="{{route('tickets.index')}}" class="menu-link">
                 <i class="menu-icon tf-icons ti ti-ticket"></i>
                 <div class="mx-2">{{__('Tickets')}}</div>
             </a>
+        </li> --}}
+        <li class="menu-item {{Route::is('profile-users.*')?'active':''}}">
+            <a href="{{route('profile-users.index')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-users"></i>
+                <div class="mx-2">{{__('Users')}}</div>
+            </a>
+        </li>
+        <li class="menu-item {{Route::is('properties.*')?'active':''}}">
+            <a href="{{route('properties.index')}}" class="menu-link">
+                <i class="menu-icon tf-icons ti ti-home"></i>
+                <div class="mx-2">{{__('Properties')}}</div>
+            </a>
+        </li>
+        <li class="menu-item {{Route::is('countries.*')?'open':''}} {{Route::is('states.*')?'open':''}} {{Route::is('cities.*')?'open':''}}">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons ti ti-settings"></i>
+                <div class="mx-2">{{__('Settings')}}</div>
+            </a>
+            <ul class="menu-sub">
+                <li class="menu-item {{Route::is('countries.index')?'active':''}}">
+                    <a href="{{route('countries.index')}}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-world"></i>
+                        <div>{{__('Countries')}}</div>
+                    </a>
+                </li>
+                <li class="menu-item {{Route::is('states.index')?'active':''}}">
+                    <a href="{{route('states.index')}}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-abacus""></i>
+                        <div>{{__('States')}}</div>
+                    </a>
+                </li>
+                <li class="menu-item {{Route::is('cities.index')?'active':''}}">
+                    <a href="{{route('cities.index')}}" class="menu-link">
+                        <i class="menu-icon tf-icons ti ti-location-pin"></i>
+                        <div>{{__('Cities')}}</div>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 </aside>

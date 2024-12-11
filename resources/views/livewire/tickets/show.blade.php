@@ -1,85 +1,155 @@
-<div>
-    <!-- Encabezado -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <form class="d-flex w-100">
-                <select class="form-select me-2">
-                    <option selected>Ciudad</option>
-                    <option value="1">Bogotá</option>
-                    <option value="2">Medellín</option>
-                    <option value="3">Cali</option>
-                </select>
-                <select class="form-select me-2">
-                    <option selected>Categoría</option>
-                    <option value="1">Conciertos</option>
-                    <option value="2">Teatro</option>
-                    <option value="3">Festivales</option>
-                </select>
-                <select class="form-select me-2">
-                    <option selected>Fecha</option>
-                    <option value="1">Hoy</option>
-                    <option value="2">Esta semana</option>
-                    <option value="3">Este mes</option>
-                </select>
-                <input class="form-control me-2" type="search" placeholder="Buscar por artista, evento..." aria-label="Search">
-                <button class="btn btn-warning" type="submit">Buscar</button>
-            </form>
-        </div>
-    </nav>
+<div class="container-fluid">
+    <!-- Barra Lateral -->
+    <div class="row">
+        <nav class="col-md-2 d-md-block bg-light sidebar">
+            <div class="position-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            <i class="ti ti-dashboard"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="ti ti-users"></i> Usuarios
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="ti ti-home"></i> Propiedades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="ti ti-settings"></i> Configuración
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <!-- Sección Destacados -->
-    <div class="container my-5">
-        <h2 class="mb-4">Destacados</h2>
-        <div class="row g-4">
-            <div class="col-md-4 col-lg-3">
-                <div class="highlight-card">
-                    <img src="https://via.placeholder.com/300x400" alt="Evento">
-                    <div class="highlight-card-body">
-                        <h5>PIPE BUENO 3ER ROUND</h5>
-                        <p class="mb-0">Movistar Arena</p>
-                        <p>Bogotá</p>
+        <!-- Contenido Principal -->
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <!-- Encabezado -->
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                <h1 class="h2">Dashboard</h1>
+                <button class="btn btn-primary">Crear Nuevo</button>
+            </div>
+
+            <!-- Resumen de Métricas -->
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Usuarios Activos</h5>
+                            <h2>1,254</h2>
+                        </div>
                     </div>
-                    <div class="highlight-card-footer text-center">
-                        <span>13 Dic</span>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Propiedades</h5>
+                            <h2>342</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning">
+                        <div class="card-body">
+                            <h5 class="card-title">Reservas Hoy</h5>
+                            <h2>89</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger">
+                        <div class="card-body">
+                            <h5 class="card-title">Ingresos Mensuales</h5>
+                            <h2>$1.2M</h2>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <div class="highlight-card">
-                    <img src="https://via.placeholder.com/300x400" alt="Evento">
-                    <div class="highlight-card-body">
-                        <h5>CULTURA PROFÉTICA Y VICENTE GARCÍA</h5>
-                        <p class="mb-0">Movistar Arena</p>
-                        <p>Bogotá</p>
+
+            <!-- Gráficos y Tablas -->
+            <div class="row my-5">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Gráfico de Usuarios</div>
+                        <div class="card-body">
+                            <canvas id="userChart"></canvas>
+                        </div>
                     </div>
-                    <div class="highlight-card-footer text-center">
-                        <span>14 Dic</span>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">Propiedades por Categoría</div>
+                        <div class="card-body">
+                            <canvas id="propertyChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Repite la misma estructura para otros eventos -->
-        </div>
+
+            <!-- Tabla de Datos -->
+            <div class="card mb-4">
+                <div class="card-header">Últimos Registros</div>
+                <div class="card-body">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Fecha Registro</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Juan Pérez</td>
+                                <td>juan@example.com</td>
+                                <td>2024-12-01</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria López</td>
+                                <td>maria@example.com</td>
+                                <td>2024-12-02</td>
+                                <td>
+                                    <button class="btn btn-sm btn-warning">Editar</button>
+                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
     </div>
 </div>
 <style>
-    .highlight-card {
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        overflow: hidden;
+    .sidebar {
+        height: 100vh;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     }
-    .highlight-card img {
-        width: 100%;
-        height: auto;
+
+    .card {
+        border-radius: 10px;
     }
-    .highlight-card-body {
-        padding: 15px;
-    }
-    .highlight-card-footer {
-        background-color: #f8f9fa;
-        padding: 10px;
-    }
-    .highlight-card-footer span {
+
+    .card .card-header {
         font-weight: bold;
-        color: #007bff;
+        background-color: #f8f9fa;
+    }
+
+    .table thead th {
+        background-color: #f8f9fa;
     }
 </style>
